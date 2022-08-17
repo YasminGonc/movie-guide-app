@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/459768b8b6.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Movie Guide App</title>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="container__content-search">
+                <label for="search-movie" class="container__content-title">Movie</label>
+                <div class="container__search">
+                    <input type="text" id="search-movie" name="search-movie" class="container__search-input" placeholder="Enter movie name here...">
+                    <button class="container__search-btn">Search</button>
+                </div>
+                <p class="container__search-error">Please enter a movie.</p>
+            </div>
+            <div class="container__movie">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTYxNGMyZTYtMjE3MS00MzNjLWFjNmYtMDk3N2FmM2JiM2M1XkEyXkFqcGdeQXVyNjY5NDU4NzI@._V1_SX300.jpg" alt="Film poster" class="container__movie-poster">
+                <div class="container__movie-infos">
+                    <h2 class="movie-infos__title">The Lion King</h2>
+                    <p class="movie-infos__stars"><i class="fa-solid fa-star"></i> 8.5</p>
+                    <div class="container__movies-infos-specific">
+                        <p class="year">1994</p>
+                        <p class="time">88 min</p>
+                    </div>
+                    <div class="container__movies-infos-genre">
+                        <p class="genre">Animation</p>
+                        <p class="genre">Adventure</p>
+                        <p class="genre">Drama</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container__infos">
+                <h3 class="container__infos-title">Plot</h3>
+                <p class="container__infos-text" id="plot">Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.</p>
+                <h3 class="container__infos-title">Cast</h3>
+                <p class="container__infos-text" id="cast">Matthew Broderick, Jeremy Irons, James Earl Jones</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="main.js"></script>
+</body>
+</html>
