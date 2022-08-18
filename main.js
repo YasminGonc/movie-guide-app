@@ -7,7 +7,9 @@ const year = document.querySelector('.year');
 const runTime = document.querySelector('.time');
 const plot = document.querySelector('#plot');
 const cast = document.querySelector('#cast');
-const genre = document.querySelectorAll('.genre');
+const genreOne = document.querySelector('#genre-one');
+const genreTwo = document.querySelector('#genre-two');
+const genreThree = document.querySelector('#genre-three');
 const errorMessage = document.querySelector('.container__search-error');
 
 const movieContainer = document.querySelector('.container__movie');
@@ -32,21 +34,35 @@ async function movieSearch() {
     let searchMovie = await fetch(`http://www.omdbapi.com/?t=${movie.value.replace(/ /g, '+')}&apikey=97213fd1`);
     let searchMovieConverted = await searchMovie.json();
 
-    img.setAttribute('src', searchMovieConverted.Poster);
-    title.innerText = searchMovieConverted.Title;
-    stars.innerHTML = `<p class="movie-infos__stars"><i class="fa-solid fa-star"></i> ${searchMovieConverted.imdbRating}</p>`
-    year.innerText = searchMovieConverted.Year;
-    runTime.innerText = searchMovieConverted.Runtime;
-    plot.innerText = searchMovieConverted.Plot;
-    cast.innerText = searchMovieConverted.Actors;
-
-    for(let i = 0; i < genre.length; i++) {
-        genre[i].innerText = searchMovieConverted.Genre.split(', ')[i];
-    }
-
     if (searchMovieConverted.Error) {
         showLoadingMessage();
         messageContainer.innerText = searchMovieConverted.Error;
+    }
+    else {
+        img.setAttribute('src', searchMovieConverted.Poster);
+        title.innerText = searchMovieConverted.Title;
+        stars.innerHTML = `<p class="movie-infos__stars"><i class="fa-solid fa-star"></i> ${searchMovieConverted.imdbRating}</p>`
+        year.innerText = searchMovieConverted.Year;
+        runTime.innerText = searchMovieConverted.Runtime;
+        plot.innerText = searchMovieConverted.Plot;
+        cast.innerText = searchMovieConverted.Actors;
+
+        if(searchMovieConverted.Genre.split(', ').length == 1) {
+            genreOne.innerText = searchMovieConverted.Genre.split(', ')[0];
+            genreTwo.classList.add('ocultar');
+            genreThree.classList.add('ocultar');
+        }
+        else if(searchMovieConverted.Genre.split(', ').length == 2) {
+            genreOne.innerText = searchMovieConverted.Genre.split(', ')[0];
+            genreTwo.innerText = searchMovieConverted.Genre.split(', ')[1];
+            genreThree.classList.add('ocultar');
+        }
+        else {
+            genreOne.innerText = searchMovieConverted.Genre.split(', ')[0];
+            genreTwo.innerText = searchMovieConverted.Genre.split(', ')[1];
+            genreThree.innerText = searchMovieConverted.Genre.split(', ')[2];
+        }
+        
     }
 }
 

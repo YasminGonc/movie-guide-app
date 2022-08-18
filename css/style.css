@@ -110,7 +110,7 @@ main {
 
 .container__movies-infos-genre {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: var(--text-obs);
     font-size: 0.7rem;
     font-weight: 700;
