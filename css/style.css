@@ -73,6 +73,7 @@ main {
     color: red;
     display: none;
 }
+
 .container__movie {
     margin: 1rem 0;
     text-align: center;
@@ -131,6 +132,16 @@ main {
     color: var(--text-obs);
     font-size: 0.9rem;
     line-height: 1.1rem;
+}
+
+.ocultar {
+    display: none;
+}
+
+.container__messages {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-title);
 }
 
 @media screen and (min-width: 768px) {
