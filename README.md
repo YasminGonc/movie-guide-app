@@ -1,4 +1,3 @@
-# movie-guide-app
  # Movie Guide App
  <div>
  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" target="_blank">
@@ -12,7 +11,7 @@
  <li>Pesquisar seus filmes favoritos e verificar suas informações.</li>
  </ul>
  <h3>Site</h3>
- <a href="https://yasmingonc.github.io/advice-generator-app-frontendmentor/" target="_blank">Advice Generator App</a>
+ <a href="#" target="_blank">Movie Guide App</a>
  <h3>Vídeo da aplicação</h3>
  https://www.loom.com/share/79209a9ccc504ac3bd86b2618ad5049d
  
