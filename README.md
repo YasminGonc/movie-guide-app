@@ -13,7 +13,7 @@
  <h3>Site</h3>
  <a href="#" target="_blank">Movie Guide App</a>
  <h3>Vídeo da aplicação</h3>
- https://www.loom.com/share/79209a9ccc504ac3bd86b2618ad5049d
+
  
  <h2> Processo </h2>
  <h3>Construído com:</h3>
